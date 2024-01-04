@@ -1,0 +1,465 @@
+ @import url('https://fonts.googleapis.com/css2?family=Borel&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;600;700&family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+ * {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+ }
+
+ html {
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+ }
+
+ :root {
+   --white: white;
+   --black: black;
+ }
+
+ header {
+   grid-area: header;
+   background-color: var(--white);
+ }
+
+ main {
+   grid-area: main;
+ }
+
+ footer {
+   grid-area: footer;
+ }
+
+ #container {
+   grid-template-areas: 'header header header header header'
+     'main main main main main'
+     'footer footer footer footer footer';
+ }
+
+ /* header css start..................................................................... */
+
+ nav {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 40px;
+   background-color: white;
+   position: fixed;
+   z-index: 1;
+   width: 100vw;
+ }
+
+ .right ul {
+   display: flex;
+   list-style: none;
+   color: var(--black);
+   gap: 34px;
+ }
+
+ .right ul li a {
+   color: var(--black);
+   text-decoration: none;
+   font-size: 17px;
+ }
+
+ .right .menu {
+   font-size: 20px;
+   display: none;
+   position: relative;
+ }
+
+ .line {
+   background-color: var(--black);
+   padding-top: 40px;
+ }
+
+ .line .change ul {
+   display: flex;
+ }
+
+ .line .change ul li {
+   padding: 0px 30px 0px 0px;
+ }
+
+ /* login css start..................................................................... */
+
+ input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#login {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#login:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  border: none;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.animate {
+  animation: animatezoom 0.6s
+}
+
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+ /* login css end..................................................................... */
+
+
+
+
+ /* header css end....................................................................... */
+
+
+ /* main css start....................................................................... */
+
+ .banner {
+   position: relative;
+   box-sizing: border-box;
+ }
+
+ .slide {
+   display: none;
+ }
+
+ .slide img {
+   width: 100vw;
+ }
+
+ /* course css start..................................................................... */
+
+
+ #course {
+   width: 100vw;
+   margin-top: 70px;
+ }
+
+ .heading {
+   text-align: center;
+   padding: 20px 0px;
+ }
+
+ .col {
+   display: flex;
+   flex-wrap: wrap;
+   width: 100vw;
+   justify-content: space-around;
+   row-gap: 15px;
+ }
+
+ .row {
+   border: 2px solid rgba(0, 0, 0, 0.716);
+   border-radius: 10px;
+   height: 150px;
+   width: 28vw;
+   box-sizing: border-box;
+   box-shadow: 7px 7px 3px 0px #484747;
+ }
+
+ .row:hover {
+  box-sizing: border-box;
+  height: 150px;
+ 
+   border: 5px solid rgb(246, 55, 7)
+ }
+
+ .lang {
+   padding: 25px;
+   background-color: rgba(222, 222, 222, 0.446);
+   display: flex;
+ }
+
+ .lang img {
+   position: relative;
+   left: 8%;
+   height: 40px;
+ }
+
+ .project {
+   display: flex;
+ }
+
+ .hours {
+   padding: 5%;
+ }
+
+ .hours p {
+   display: inline;
+ }
+
+ /* course css end..................................................................... */
+
+ /* review css start................................................................... */
+
+ #review {
+   margin-top: 60px;
+   min-height: 50vh;
+ }
+
+ .counter {
+   display: flex;
+   justify-content: space-evenly;
+   width: 100vw;
+ }
+
+ .card {
+   width: 15%;
+   text-align: center;
+   padding: 25px;
+   line-height: 40px;
+   background-color: #3d474d;
+   color: var(--white);
+ }
+
+ .card i {
+   font-size: 50px;
+ }
+
+
+
+
+ /* review css end.................................................................... */
+
+ .contact {
+   width: 100vw;
+ }
+
+ .contact-flex {
+   width: 100vw;
+   display: flex;
+ }
+
+ .contact-form {
+   width: 50vw;
+   height: 400px;
+   background-color: rgb(29, 49, 69);
+   display: flex;
+   justify-content: center;
+ }
+
+ .contact-flex form input {
+   display: block;
+   height: 8%;
+   width: 30vw;
+   margin: 15px 0px;
+   font-size: 18px;
+ }
+
+ #message {
+   width: 30vw;
+ }
+
+ #submit {
+   background-color: rgba(0, 0, 0, 0.756);
+   color: var(--white);
+   cursor: pointer;
+   border: none;
+   transition: 0.3s;
+ }
+
+ #submit:hover{
+  background-color: rgba(3, 3, 27, 0.79);
+ }
+
+ .contact-img{
+  width: 50%;
+  text-align: center;
+ }
+
+ .contact-img img{
+  height: 400px;
+ }
+
+ /* main css end....................................................................... */
+
+
+/* footer css start.................................................................... */
+
+.copyright{
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+/* footer css end...................................................................... */
+
+#top{
+  position: fixed;
+  z-index: 5;
+  display: none;
+  bottom: 20px;
+  right: 40px;
+  border: none;
+  outline: none;
+  background-color: crimson;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+
+
+ /* media query section.................................................................... */
+
+ @media only screen and (max-width:600px) {
+   .right ul {
+     flex-direction: column;
+     display: none;
+   }
+
+   .right .menu {
+     display: block;
+   }
+
+
+   /* banner............................................................................. */
+
+   .col {
+     flex-direction: column;
+   }
+
+   .row {
+     width: 100vw;
+   }
+
+   .counter {
+     flex-direction: column;
+     row-gap: 20px;
+   }
+
+   .card {
+     width: 100vw;
+   }
+
+   /* contact media queri strart......................................................... */
+
+   .contact-flex {
+     flex-direction: column;
+   }
+
+   .contact-form {
+     width: 100%;
+     justify-content: none;
+   }
+
+   .contact-flex form input {
+     width: 100vw;
+
+   }
+
+   #message {
+     width: 100vw;
+   }
+
+   .contact-img{
+    display: none;
+   }
+
+
+ }
+
+ @media only screen and (min-width:601px) and (max-width:950px){
+
+  .row {
+    width: 45vw;
+  }
+
+  .counter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    width: 45vw;
+  }
+
+ }
